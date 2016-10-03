@@ -15,7 +15,8 @@
                     <a href="{% url 'music:album_update' album.id %}">(update)</a>
                     <form action="{% url 'music:album_delete' album.id %}" method=""post">
                         {% csrf_token %}
-                        <button type="submit">delete</button>
+                        <p>Are you sure you want to delete "{{ object }}"?</p>
+                        <input type="submit" value="Confirm" />
                     </form>
                     <!--<a href="{% url 'music:album_delete' album.id %}">(delete)</a>-->
 
