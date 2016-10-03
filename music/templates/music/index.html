@@ -13,10 +13,10 @@
                 <li>
                     <a href="{% url 'music:detail' album.id %}">{{ album.album_title}}</a>
                     <a href="{% url 'music:album_update' album.id %}">(update)</a>
-                    <form action="{% url 'music:album_delete' album.id %}" method=""post">
+                    <form action="{% url 'music:album_delete' album.id %}" method="post">
                         {% csrf_token %}
-                        <p>Are you sure you want to delete "{{ object }}"?</p>
-                        <input type="submit" value="Confirm" />
+                        <!--re you sure you want to delete?-->
+                        (delete)<input type="submit" value="delete" />
                     </form>
                     <!--<a href="{% url 'music:album_delete' album.id %}">(delete)</a>-->
 
